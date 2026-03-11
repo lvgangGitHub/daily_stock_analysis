@@ -23,6 +23,7 @@ jobs:
         pip install requests pandas numpy
         # 这里可以添加其他需要的依赖包
     
+    # 在"运行股票分析"步骤中替换为：
     - name: 运行股票分析
       env:
         STOCK_LIST: ${{ secrets.STOCK_LIST }}
@@ -30,7 +31,8 @@ jobs:
         EMAIL_SENDER: ${{ secrets.EMAIL_SENDER }}
         EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
         EMAIL_RECEIVERS: ${{ secrets.EMAIL_RECEIVERS }}
-      run: | python analyze_stocks.py
+      run: |
+        python analyze_stocks.py
         # 这里放置运行分析的Python脚本
         echo "开始股票分析..."
         # 实际的分析脚本会在后续步骤中添加
