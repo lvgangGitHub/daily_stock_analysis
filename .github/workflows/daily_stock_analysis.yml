@@ -30,7 +30,7 @@ jobs:
         EMAIL_SENDER: ${{ secrets.EMAIL_SENDER }}
         EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
         EMAIL_RECEIVERS: ${{ secrets.EMAIL_RECEIVERS }}
-      run: |
+      run: | analyze_stocks.py
         # 这里放置运行分析的Python脚本
         echo "开始股票分析..."
         # 实际的分析脚本会在后续步骤中添加
