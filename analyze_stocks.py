@@ -19,7 +19,7 @@ def fetch_stock_data(stock_codes):
  
 def analyze_with_ai(stock_data):
     """使用AI模型分析股票"""
-    api_key = os.getenv('GEMINI_API_KEY')
+    api_key = os.getenv('OPENAI_API_KEY')
     if not api_key:
         print("未找到AI API密钥，使用模拟分析")
         return generate_mock_analysis(stock_data)
